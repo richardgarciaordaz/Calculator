@@ -1,73 +1,87 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background-color: rgb(41, 6, 72);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  background-color: rgb(41, 6, 72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculadora {
-    background-color: #8f097f;
-    color: white;
-   
-    padding: 10px;
-    border-radius: 10px;
-    width: 350px;
-    max-width: 100%;
-    padding: 1.5rem;
-    border-radius: 1rem;
+  background-color: #181818; /* Light base color for neumorphism */
+  color: #333; /* Dark text color */
+  
+  padding: 10px;
+  border-radius: 10px;
+  width: 350px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    gap: .5rem
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  gap: .5rem;
+  
+  /* Neumorphism shadows */
+  box-shadow: 
+    5px 5px 10px rgba(0, 0, 0, 0.2), /* Inner shadow */
+    -5px -5px 10px rgba(255, 255, 255, 0.7); /* Outer shadow */
 }
 
 .pantalla {
-    grid-column: 1 / -1;
-    background-color: rgb(41, 6, 72);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding: 1.5rem;
-    border-radius: .5rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-family: "Monospace";
-    font-weight: 600;
-    backdrop-filter: blur(10px);
+  grid-column: 1 / -1;
+  background-color: #fff; /* Light base color */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: "Monospace";
+  font-weight: 600;
+  
+  /* Neumorphism shadows */
+  box-shadow: 
+    inset 5px 5px 10px rgba(0, 0, 0, 0.2), /* Inner shadow */
+    inset -5px -5px 10px rgba(255, 255, 255, 0.7); /* Outer shadow */
 }
 
-.btn{
-    background-color: #8f097f;
-    color: white;
-    border: 0;
-    padding: 1.5rem 1rem;
-    border-radius: .5rem;
-    cursor: pointer;
-    font-size: 1.5rem;
-    backdrop-filter: blur(10px);
+.btn {
+  background-color: #fff; /* Light base color */
+  color: #333; /* Dark text color */
+  border: none;
+  padding: 1.5rem 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  
+
 }
 
 .btn:hover {
-    background-color: rgb(41, 6, 72);
+  background-color: #ddd; /* Slightly darker on hover */
 }
 
 #igual {
-    grid-column: span 2;
-    background-color: #dd1529;
+  grid-column: span 2;
+  background-color: #dd1529; /* Original background color */
+  color: white; /* White text color */
+  
+  /* Neumorphism shadows */
+  box-shadow: 
+    5px 5px 10px rgba(0, 0, 0, 0.2), /* Inner shadow */
+    
 }
 
 #igual:hover {
-    background-color: rgb(41, 6, 72);
+  background-color: rgb(189, 21, 41); /* Darker red on hover */
 }
-
-
